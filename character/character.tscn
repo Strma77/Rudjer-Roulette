@@ -19,5 +19,12 @@ mesh = SubResource("CapsuleMesh_y65i7")
 [node name="Head" type="Node3D" parent="." unique_id=430685165]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85333294, 0)
 
-[node name="Camera3D" type="Camera3D" parent="Head" unique_id=166450485]
+[node name="GameCamera" type="Camera3D" parent="Head" unique_id=166450485]
 script = ExtResource("2_1l1n4")
+
+[node name="Camera1" type="Camera3D" parent="Head/GameCamera" unique_id=895823165]
+transform = Transform3D(0.7071068, 0, 0.7071068, 0, 1, 0, -0.7071068, 0, 0.7071068, -2.1730607, -0.85333294, 0)
+
+[node name="Camera2" type="Camera3D" parent="Head/GameCamera" unique_id=1126544159]
+transform = Transform3D(0.7071068, 0, -0.7071068, 0, 1, 0, 0.7071068, 0, 0.7071068, 1.8062816, -0.85333294, 0)
+fov = 179.0
