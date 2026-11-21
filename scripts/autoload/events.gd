@@ -1,7 +1,4 @@
 extends Node
-## Global signal bus (autoload "Events").
-## One side emits, the other listens. Screens never reference each other directly.
-## Usage: Events.teacher_caught.emit()  /  Events.teacher_caught.connect(_on_teacher_caught)
 
 ## Player turned around. facing = GameState.Facing.BOARD or GameState.Facing.POKER.
 ## Emitted by GameState.set_facing(). Listened by: poker (cheating), board (teacher, thief).
