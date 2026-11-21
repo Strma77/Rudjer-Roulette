@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dp866ipmy0uc7"]
+
+[ext_resource type="Texture2D" uid="uid://bphdnpqoe82cr" path="res://icon.svg" id="1_7nsre"]
+[ext_resource type="PackedScene" uid="uid://cms8dw1x52oxp" path="res://character/character.tscn" id="2_hgi4l"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mcjul"]
+size = Vector3(15, 1, 15)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o3axm"]
+albedo_texture = ExtResource("1_7nsre")
+uv1_scale = Vector3(3, 2, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_y65i7"]
+
+[node name="Node3D" type="Node3D" unique_id=966241087]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=486226470]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=802490866]
+shape = SubResource("BoxShape3D_mcjul")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=646459845]
+transform = Transform3D(15, 0, 0, 0, 1, 0, 0, 0, 15, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_o3axm")
+mesh = SubResource("BoxMesh_y65i7")
+
+[node name="Player" parent="." unique_id=1082868951 instance=ExtResource("2_hgi4l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7961633, 0)
