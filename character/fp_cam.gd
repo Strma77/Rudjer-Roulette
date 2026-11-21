@@ -3,6 +3,11 @@ extends Camera3D
 
 var sensitivity = 0.2
 
+
+
+func _ready() -> void:
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
 		get_parent().rotate_y(deg_to_rad(-event.relative.x*sensitivity))
